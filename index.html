@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Tasks Site</title>
+    <!-- font awesome script -->
+    <script
+      src="https://kit.fontawesome.com/85514335c8.js"
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .container {
+        padding: 20px 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .makeTask {
+        background-color: #eee;
+        padding: 20px;
+        border-radius: 6px;
+        display: flex;
+      }
+      .makeTask input[type="text"] {
+        width: 400px;
+        height: 40px;
+        border-radius: 6px;
+        border: none;
+        margin-right: 10px;
+        padding-left: 10px;
+        font-size: 18px;
+      }
+      @media (max-width: 768px) {
+        .makeTask input[type="text"] {
+          width: 100%;
+        }
+      }
+      .makeTask input[type="text"]:focus {
+        outline: none;
+      }
+      .makeTask input[type="submit"] {
+        background-color: orangered;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 10px;
+      }
+      .tasks {
+        padding: 20px;
+        background-color: #eee;
+        width: 535px;
+        border-radius: 6px;
+        margin-top: 20px;
+      }
+      @media (max-width: 768px) {
+        .tasks {
+          width: 100%;
+        }
+      }
+      .tasks .task {
+        background-color: white;
+        padding: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 6px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      i.removeBtn {
+        color: red;
+        font-size: 15px;
+        cursor: pointer;
+      }
+      h1 {
+        color: white;
+        padding: 10px;
+        background-color: orangered;
+        width: -moz-fit-content;
+        width: fit-content;
+        margin: 20px auto;
+        border-radius: 6px;
+      }
+      .tasksheading {
+        font-size: 15px;
+        color: red;
+        margin: 0 0 10px;
+        display: block;
+      }
+    </style>
+    <h1>Tasks Site</h1>
+    <div class="container">
+      <form class="makeTask">
+        <input
+          type="text"
+          class="input"
+          name="task"
+          placeholder="Your Task.." />
+        <input
+          type="submit"
+          class="add"
+          value="Add Task" />
+      </form>
+      <hr />
+      <div class="tasks">
+        <span class="tasksheading">The Tasks:</span>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
